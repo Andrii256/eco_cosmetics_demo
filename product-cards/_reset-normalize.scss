@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  &::selection {
+    color: $colorPaleBrown;
+    background: $colorPaleGreen;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: $fontFamily;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $colorPaleBrown;
+  color: $colorDark;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
