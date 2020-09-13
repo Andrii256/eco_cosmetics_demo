@@ -41,10 +41,11 @@ body {
 
   &::-webkit-scrollbar {
     height: 7px;
-    background-color: $colorPaleBrown;
+    background-color: #{$colorPaleGreen}55;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    background-color: $colorPaleGreen;
+    // border-radius: 50px;
+    background-color: #{$colorPaleGreen}99;
+    border: 1px solid #{$colorPaleGreen}ff;
   }
 }

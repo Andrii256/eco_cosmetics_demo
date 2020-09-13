@@ -30,15 +30,15 @@
       padding: 0 $bodyMobileSidePadding;
     }
   }
+  &__chapter-button {
+    margin-right: 20px;
+  }
   &__slider-navigation-radio {
     display: none;
     &:checked + .shop__chapter-button {
       color: $colorDark;
       border-bottom-color: $colorDark;
     }
-  }
-  &__chapter-button {
-    margin-right: 20px;
   }
 
   &__slider {

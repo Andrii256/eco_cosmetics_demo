@@ -46,7 +46,7 @@ const initSlider = () => {
 
   // slider navigation logic
   /* make array of proper breackpoints (scrollLeft values) for every chapter (button) */
-  const chaptersPositions = [0];
+  const chaptersPositions = [0]; /* first chapter position is everytime scrollLeft === 0 */
 
   for (let i = 0; i < chaptersCounts.length - 1; i++) {
     chaptersPositions.push(chaptersPositions[i] + chaptersCounts[i] * (cardWidth + marginWidth));
@@ -94,8 +94,10 @@ initSlider();
 
 // when window sizes changes, then card sizes changes too
 window.addEventListener('resize', () => {
-  cardWidth = (sliderRow.offsetWidth - marginWidth * (quantifyOfSlides - 1)) / quantifyOfSlides;
-  initSlider();
+  setTimeout(() => {
+    cardWidth = (sliderRow.offsetWidth - marginWidth * (quantifyOfSlides - 1)) / quantifyOfSlides;
+    initSlider();
+  }, 1000); /* there are bug in browser, sometimes it dont update card.offsetWidth in time */
 });
 
 // menu closing

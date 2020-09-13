@@ -38,4 +38,14 @@ body {
 
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    height: 7px;
+    background-color: #{$colorPaleGreen}55;
+  }
+  &::-webkit-scrollbar-thumb {
+    // border-radius: 50px;
+    background-color: #{$colorPaleGreen}99;
+    border: 1px solid #{$colorPaleGreen}ff;
+  }
 }

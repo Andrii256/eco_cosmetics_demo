@@ -1,6 +1,6 @@
 'use strict';
 
-function menuHidding() {
+function menuHidder() {
   const checbox = document.querySelector('#menuToggler');
   const linksList = document.querySelector('.header__ul');
 
@@ -10,4 +10,4 @@ function menuHidding() {
   };
 };
 
-menuHidding();
+menuHidder();

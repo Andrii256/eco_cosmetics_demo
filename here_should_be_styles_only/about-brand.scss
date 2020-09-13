@@ -3,8 +3,11 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  padding: $aboutBrandTopPadding 0 200px $bodyLeftPadding;
+  $aboutBrandTopSpace: 30px;
+  margin-top: $aboutBrandTopPadding - $aboutBrandTopSpace;
+  padding: $aboutBrandTopSpace 0 200px $bodyLeftPadding;
   @media (max-width: $screenDesctop) {
+    margin-top: 0;
     padding: 100px 0 80px $bodyLaptopSidePadding;
   }
   @media (max-width: $screenMobile) {
@@ -44,10 +47,31 @@
 
   // }
 
+  &__small-image {
+    display: block;
+    width: calc(100% - 100px
+    - #{$aboutBrandIndentationBetweenPhotos}
+    - #{$aboutBrandBigPhotoWidth});
+    height: 430px;
+    margin-left: $aboutBrandIndentationBetweenPhotos;
+    object-fit: cover;
+    transition-duration: $transitionDuration;
+    @media (max-width: $screenLaptop) {
+      display: none;
+    }
+  }
   &__images-container {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    &:hover {
+      .about-brand__small-image {
+        width: calc(100% - 100px
+        - #{$aboutBrandIndentationBetweenPhotos}
+        - #{$aboutBrandBigPhotoWidth}
+        + 20px);
+      }
+    }
     @media (max-width: $screenLaptop) {
       align-items: center;
       width: 48%;
@@ -63,18 +87,6 @@
     @media (max-width: $screenLaptop) {
       height: auto;
       width: 100%;
-    }
-  }
-  &__small-image {
-    display: block;
-    width: calc(100% - 100px
-    - #{$aboutBrandIndentationBetweenPhotos}
-    - #{$aboutBrandBigPhotoWidth});
-    height: 430px;
-    margin-left: $aboutBrandIndentationBetweenPhotos;
-    object-fit: cover;
-    @media (max-width: $screenLaptop) {
-      display: none;
     }
   }
 

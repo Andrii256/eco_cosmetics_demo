@@ -1,12 +1,29 @@
 .slider {
   overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 40px;
+  @media (max-width: $screenLaptop) {
+    padding-bottom: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    height: 9px;
+    background-color: $colorPaleBrown;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: $colorPaleGreen;
+  }
 
   &__slides-row {
     display: flex;
     width: calc(#{$sliderSlideWidth} * #{$sliderSlidesNumber}
     + #{$sliderSlideSideMargin} * #{($sliderSlidesNumber - 1)});
     padding-top: 15px;
-    // transform: translateX(- $sliderSlideWidth);
+    transition-duration: $transitionDuration;
     @media (max-width: $screenDesctop) {
       width: calc(#{$sliderSlideWidthDesctop} * #{$sliderSlidesNumber}
       + #{$sliderSlideSideMargin} * #{($sliderSlidesNumber - 1)});

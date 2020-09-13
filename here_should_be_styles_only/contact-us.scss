@@ -40,13 +40,22 @@
   }
 
   &__image {
-    display: block;
-    // height: 100%;
     max-height: 600px;
     width: 50%;
-    object-fit: cover;
+    overflow: hidden;
     @media (max-width: $screenSmallLaptop) {
       display: none;
+    }
+  }
+
+  &__img-actually {
+    display: block;
+    margin-top: -100px;
+    max-width: 100%;
+    object-fit: cover;
+    transition-duration: $transitionDuration;
+    &:hover {
+      transform: scale(1.04);
     }
   }
 
