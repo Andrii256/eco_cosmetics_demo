@@ -1,1 +1,1 @@
-I made this repository because of it has few pages, but my npm set only for 1 page pages
+https://andrii256.github.io/eco_cosmetics_demo/
